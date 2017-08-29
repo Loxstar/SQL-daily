@@ -37,9 +37,9 @@ select * from todos
 where completed_at is null
 order by priority asc;
 
-select * from todos
-where created_at  <= '2017-08-29 2:45:59'
-order by priority asc;
+select * from todos 
+where created_at > current_date - 30
+order by priority asc; 
 
 select * from todos
 where priority <= 1 and created_at is not null
