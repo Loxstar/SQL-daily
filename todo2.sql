@@ -29,3 +29,19 @@ values ('Basket weaving', 'Get basket things and weave', 3, '2017-08-27 05:40:10
 ('Jokes', 'Comedy', 5, '2017-08-28 12:45:09-01'),
 ('Slap', 'Faces', 5, '2017-08-26 2:45:59');
 
+select count(priority) 
+from todos
+where priority = 3 and where completed_at is null;
+
+select * from todos
+where completed_at is null
+order by priority asc;
+
+select * from todos
+where created_at  <= '2017-08-29 2:45:59'
+order by priority asc;
+
+select * from todos
+where priority <= 1 and created_at is not null
+order by created_at asc
+limit 1;
